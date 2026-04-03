@@ -1,0 +1,13 @@
+{
+  "accounts": [
+    {
+      "name": "copilot-1693",
+      "endpoint": "http://172.17.0.1:1693"
+    },
+    {
+      "name": "copilot-1692",
+      "endpoint": "http://172.17.0.1:1692"
+    }
+  ],
+  "warningThreshold": 20
+}

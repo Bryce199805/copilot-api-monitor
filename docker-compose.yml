@@ -1,0 +1,11 @@
+services:
+  copilot-monitor:
+    build: .
+    container_name: copilot-api-monitor
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./config:/app/config:ro
+    environment:
+      - CONFIG_PATH=/app/config/accounts.json
+    restart: unless-stopped
