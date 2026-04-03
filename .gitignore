@@ -5,3 +5,8 @@ dist/
 .DS_Store
 server/.server.pid
 server.log
+
+# Local deployment configs
+docker-compose.prod.yml
+docker-compose.*.yml
+!docker-compose.yml

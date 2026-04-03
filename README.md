@@ -25,7 +25,7 @@ A unified monitoring platform for multiple [GitHub Copilot API](https://github.c
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/copilot-api-monitor.git
+git clone https://github.com/Bryce199805/copilot-api-monitor.git
 cd copilot-api-monitor
 ```
 
@@ -38,18 +38,18 @@ Edit `config/accounts.json`:
   "accounts": [
     {
       "name": "Account-1",
-      "endpoint": "http://172.17.0.1:1693"
+      "endpoint": "http://host.docker.internal:1693"
     },
     {
       "name": "Account-2",
-      "endpoint": "http://172.17.0.1:1692"
+      "endpoint": "http://host.docker.internal:1692"
     }
   ],
   "warningThreshold": 20
 }
 ```
 
-> **Note**: When running in Docker, use the Docker gateway IP (e.g., `172.17.0.1`) or `host.docker.internal` to access services on the host machine.
+> **Note**: When running in Docker, use `host.docker.internal` (or Docker gateway IP like `172.17.0.1`) to access services on the host machine.
 
 ### 3. Build and Run
 
