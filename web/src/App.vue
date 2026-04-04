@@ -55,8 +55,14 @@ const activeAccount = ref(localStorage.getItem('activeAccount') || '');
 
 const sortedAccounts = computed(() => {
   return [...accounts.value].sort((a, b) => {
+    // Active account always first
     if (a.name === activeAccount.value) return -1;
     if (b.name === activeAccount.value) return 1;
+
+    // Online accounts before offline
+    if (a.status === 'online' && b.status === 'offline') return -1;
+    if (a.status === 'offline' && b.status === 'online') return 1;
+
     return 0;
   });
 });
