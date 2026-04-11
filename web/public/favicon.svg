@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F8CF7"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="url(#bg)"/>
+  <!-- Monitor screen -->
+  <rect x="12" y="14" width="40" height="30" rx="3" ry="3" fill="#0f172a" stroke="#93c5fd" stroke-width="1.5"/>
+  <!-- Signal wave lines on screen -->
+  <path d="M18 29 Q22 22, 26 29 Q30 36, 34 29 Q38 22, 42 29" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Status dot top-right -->
+  <circle cx="48" cy="18" r="2.5" fill="#4ade80"/>
+  <!-- Monitor stand -->
+  <rect x="28" y="44" width="8" height="4" rx="1" fill="#93c5fd"/>
+  <rect x="22" y="48" width="20" height="3" rx="1.5" fill="#93c5fd"/>
+</svg>
