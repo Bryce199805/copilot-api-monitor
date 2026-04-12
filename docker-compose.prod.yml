@@ -1,0 +1,33 @@
+services:
+  copilot-monitor:
+    build: .
+    container_name: copilot-api-monitor
+    expose:
+      - "3000"
+    volumes:
+      - ./config:/app/config:ro
+    environment:
+      - CONFIG_PATH=/app/config/accounts.json
+    restart: unless-stopped
+    networks:
+      - monitor-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: copilot-monitor-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - copilot-monitor
+    restart: unless-stopped
+    networks:
+      - monitor-network
+
+networks:
+  monitor-network:
+    driver: bridge
+    name: shared-proxy
