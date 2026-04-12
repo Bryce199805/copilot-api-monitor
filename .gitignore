@@ -10,3 +10,7 @@ server.log
 docker-compose.prod.yml
 docker-compose.*.yml
 !docker-compose.yml
+
+# Local symlinks (nginx/ssl configs)
+nginx/
+ssl/
